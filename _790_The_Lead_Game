@@ -1,0 +1,44 @@
+import java.util.Scanner;
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	 Scanner sc = new Scanner(System.in);
+	 int n=sc.nextInt();
+	 int []s=new int[n];
+	 int []t=new int[n];
+	 for(int i=0;i<n;i++)
+	 {
+	  s[i]=sc.nextInt();
+	  t[i]=sc.nextInt();
+	 }
+	 int max=0;
+	 int player=0;
+	 int diff=0;
+	 int cum1=0,cum2=0;
+	 for(int i=0;i<n;i++)
+	 {
+	  cum1+=s[i];
+	  cum2+=t[i];
+	  if(cum1>cum2)
+	  {
+	   diff=cum1-cum2;
+	   if(diff>max)
+	   {
+	    max=diff;
+	    player=1;
+	   }
+	  }
+	  else
+	  {
+	   diff=cum2-cum1;
+	   if(diff>max)
+	   {
+	    max=diff;
+	    player=2;
+	   }
+	  }
+	 }
+	 System.out.print(player + " " + max);
+	}
+}
