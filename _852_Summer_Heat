@@ -1,0 +1,26 @@
+import java.util.Scanner;
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	 Scanner sc = new Scanner(System.in);
+	 int t=sc.nextInt();
+	 for(int i=0;i<t;i++)
+	 {
+	  int xa=sc.nextInt();
+	  int xb=sc.nextInt();
+	  int Xa=sc.nextInt();
+	  int Xb=sc.nextInt();
+	  int ans=0;
+	  if(Xa%xa==0)
+	   ans+=Xa/xa;
+	  else
+	   ans+=Xa/xa+1;
+	  if(Xb%xb==0)
+	   ans+=Xb/xb;
+	  else
+	   ans+=Xb/xb+1;
+	  System.out.println(ans);
+	 }
+	}
+}
