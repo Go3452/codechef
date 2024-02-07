@@ -1,0 +1,45 @@
+import java.util.Scanner;
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	 Scanner sc = new Scanner(System.in);
+	 int t=sc.nextInt();
+	 for(int j=0;j<t;j++)
+	 {
+	  int n=sc.nextInt();
+	  String s=sc.next();
+	  if(n<4)
+	   System.out.println("Yes");
+	  else
+	  {
+	   int c=0,max=0;
+	   for(int i=0;i<n;i++)
+	   {
+	    if(isconsonant(s.charAt(i))==1)
+	     c++;
+	    else
+	    {
+	     if(max<c)
+	      max=c;
+	     c=0;
+	    }
+	   }
+	   if(max<c)
+	    max=c;
+	   if(max>=4)
+	    System.out.println("No");
+	   else
+	    System.out.println("Yes");
+	  }
+	 }
+	}
+
+	static int isconsonant(char ch)
+	{
+	 if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+	  return 0;
+	 return 1;
+	}
+
+}
