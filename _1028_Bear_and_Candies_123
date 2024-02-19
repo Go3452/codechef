@@ -1,0 +1,42 @@
+import java.util.Scanner;
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	 Scanner sc = new Scanner(System.in);
+	 int t=sc.nextInt();
+	 for(int i=0;i<t;i++)
+	 {
+	  int a=sc.nextInt();
+	  int b=sc.nextInt();
+	  int count=1;
+	  while(true)
+	  {
+	   if(count%2==1)
+	   {
+	    if(a>=count)
+	    {
+	     a-=count;
+	     count++;
+	    }
+	    else
+	    {
+	     System.out.println("Bob");break;     
+	    }
+	   }
+	   else
+	   {
+	    if(b>=count)
+	    {
+	     b-=count;
+	     count++;
+	    }
+	    else
+	    {
+	     System.out.println("Limak");break;
+	    }
+	   }
+	  }
+	 }
+	}
+}
