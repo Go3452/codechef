@@ -1,0 +1,48 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+     Scanner sc = new Scanner(System.in);
+     int t = sc.nextInt();
+     for(int j=0;j<t;j++)
+     {
+      int n=sc.nextInt();
+      int u=sc.nextInt();
+      int d=sc.nextInt();
+      int p=1;
+      int count=1;
+      int arr[] = new int[n];
+      for(int i=0;i<n;i++)
+       arr[i]=sc.nextInt();
+      for(int i=0;i<n-1;i++)
+      {
+       if(arr[i]<arr[i+1])
+       {
+        if((arr[i+1]-arr[i])<=u)
+         count++;
+        else
+         break;
+       }
+       else if(arr[i]>arr[i+1])
+       {
+        if((arr[i]-arr[i+1])<=d)
+         count++;
+        else if(p>0)
+        {
+         count++;
+         p--;
+        }
+        else
+         break;
+       }
+       else
+        count++;
+      }
+      System.out.println(count);
+     }
+	}
+}
