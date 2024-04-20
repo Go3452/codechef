@@ -1,0 +1,36 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	 Scanner sc = new Scanner(System.in);
+	 int t=sc.nextInt();
+	 for(int j=0;j<t;j++)
+	 {
+	  int x=sc.nextInt();
+	  String s=sc.next();
+	  int carl=0,chef=0,draw=0;
+	  for(int i=0;i<14;i++)
+	  {
+	   if(s.charAt(i)=='C')
+	    carl++;
+	   else if(s.charAt(i)=='N')
+	    chef++;
+	   else
+	    draw++;
+	  }
+	  int carlpoi=0,chefpoi=0;
+	  carlpoi=carl*2+draw*1;
+	  chefpoi=chef*2+draw*1;
+	  if(chefpoi==carlpoi)
+	   System.out.println(55*x);
+	  else if(chefpoi>carlpoi)
+	   System.out.println(40*x);
+	  else
+	   System.out.println(60*x);
+	 }
+	}
+}
