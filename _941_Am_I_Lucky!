@@ -1,0 +1,27 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	 Scanner sc = new Scanner(System.in);
+	 int t = sc.nextInt();
+	 for(int i=0;i<t;i++)
+	 {
+	  int n = sc.nextInt();
+	  int k = sc.nextInt();
+	  int x = sc.nextInt();
+	  int sum=0,l=n-k;
+	  int a=k/x,b=l/x;
+	  k-=a*x;
+	  l-=b*x;
+	  if(k<l)
+	   sum=l-k;
+	  else
+	   sum=k-l;
+	  System.out.println(sum);
+	 }
+	}
+}
