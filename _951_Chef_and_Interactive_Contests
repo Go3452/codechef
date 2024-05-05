@@ -1,0 +1,25 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	 Scanner sc = new Scanner(System.in);
+	 int n = sc.nextInt();
+	 int r = sc.nextInt();
+	 int []R = new int[n];
+	 for(int i=0;i<n;i++)
+	  R[i]=sc.nextInt();
+	 String a="Good boi";
+	 String b="Bad boi";
+	 for(int i=0;i<n;i++)
+	 {
+	  if(R[i]<r)
+	   System.out.println(b);
+	  else
+	   System.out.println(a);
+	 }
+	}
+}
