@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int t = scanner.nextInt();
+        while (t-- > 0) {
+            int n = scanner.nextInt();
+            String s = scanner.next();
+            char serve='A';
+            int a=0,b=0;
+            for(int i=0;i<n;i++)
+            {
+             char ch=s.charAt(i);
+             if(ch==serve)
+             {
+              if(serve=='A')
+               a++;
+              else
+               b++;
+             }
+             else
+              serve=ch;
+            }
+            System.out.println(a + " " + b);
+        }
+    }
+}
