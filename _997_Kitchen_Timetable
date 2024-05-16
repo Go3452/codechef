@@ -1,0 +1,42 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	 Scanner sc = new Scanner(System.in);
+	 int t = sc.nextInt();
+	 for(int j=0;j<t;j++)
+	 {
+	  int n = sc.nextInt();
+	  int []a = new int[n];
+	  int []b = new int[n];
+	  for(int i=0;i<n;i++)
+	   a[i]=sc.nextInt();
+	  for(int i=0;i<n;i++)
+	   b[i]=sc.nextInt();
+	  int count=0;
+	  for(int i=0;i<n;i++)
+	  {
+	   if(i==0)
+	   {
+	    if(a[i]>=b[i])
+	    {
+	     count++;
+	    }
+	   }
+	   else
+	   {
+	    int num=a[i]-a[i-1];
+	    if(num>=b[i])
+	    {
+	      count++;
+	    }
+	   }
+	  }
+	  System.out.println(count);
+	 }
+	}
+}
