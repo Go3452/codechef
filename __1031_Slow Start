@@ -1,0 +1,32 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+     Scanner sc = new Scanner(System.in);
+     int t = sc.nextInt();
+     for(int i=0;i<t;i++)
+     {
+      int x = sc.nextInt();
+      int h = sc.nextInt();
+      int a=x/2;
+      int count=0;
+      if(5*a>=h)
+      {
+       if(h%a==0) count=h/a;
+       else count=h/a+1;
+      }
+      else
+      {
+       count=5;
+       h-=5*a;
+       if(h%x==0) count+=h/x;
+       else count+=h/x+1;
+      }
+      System.out.println(count);
+     }
+	}
+}
