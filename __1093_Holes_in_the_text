@@ -1,0 +1,28 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+     Scanner sc = new Scanner(System.in);
+     int t = sc.nextInt();
+     for(int i=0;i<t;i++)
+     {
+      String ans = sc.next();
+      int n=ans.length();
+      int count=0;
+      for(int j=0;j<n;j++)
+      {
+       char ch = ans.charAt(j);
+       if(ch=='A'||ch=='D'||ch=='O'||ch=='P'||ch=='Q'||ch=='R')
+        count++;
+       else if(ch=='B')
+        count+=2;
+      }
+      System.out.println(count);
+      
+     }
+	}
+}
