@@ -1,0 +1,38 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	 Scanner sc = new Scanner(System.in);
+	 int t = sc.nextInt();
+	 for(int j=0;j<t;j++)
+	 {
+	  int n = sc.nextInt();
+	  String s = sc.next();
+	  if(n%2==1)
+	   System.out.println("NO");
+	  else
+	  {
+	   int freq[] = new int[26];
+	   for(int i=0;i<n;i++)
+	    freq[s.charAt(i)-'a']++;
+	   int flag=0;
+	   for(int i=0;i<26;i++)
+	   {
+	    if(freq[i]%2==1)
+	    {
+	     flag=1;
+	     break;
+	    }
+	   }
+	   if(flag==0) 
+	    System.out.println("YES");
+	   else
+	    System.out.println("NO");
+	  }
+	 }
+	}
+}
