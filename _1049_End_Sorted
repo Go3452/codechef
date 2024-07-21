@@ -1,0 +1,38 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	 Scanner sc = new Scanner(System.in);
+	 int t = sc.nextInt();
+	 for(int j=0;j<t;j++)
+	 {
+	  int n = sc.nextInt();
+	  int []arr = new int[n];
+	  for(int i=0;i<n;i++)
+	   arr[i]=sc.nextInt();
+	  int min=arr[0],minind=0,max=arr[0],maxind=0;
+	  for(int i=1;i<n;i++)
+	  {
+	   if(min>arr[i])
+	   {
+	    min=arr[i];
+	    minind=i;
+	   }
+	   else if(max<arr[i])
+	   {
+	    max=arr[i];
+	    maxind=i;
+	   }
+	  }
+	  int len=0;
+	  len=(minind)+(n-maxind-1);
+	  if(minind>maxind)
+	   len--;
+	  System.out.println(len);
+	 }
+	}
+}
