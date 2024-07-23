@@ -1,0 +1,30 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	 Scanner sc = new Scanner(System.in);
+	 int t = sc.nextInt();
+	 for(int j=0;j<t;j++)
+	 {
+	  int n = sc.nextInt();
+	  String s = sc.next();
+	  int unit=0;
+	  for(int i=0;i<n;i++)
+	  {
+	   if(i==n-1)
+	    unit++;
+	   else
+	   {
+	    if(s.charAt(i)==s.charAt(i+1))
+	     i++;
+	    unit++;
+	   }
+	  }
+	  System.out.println(unit);
+	 }
+	}
+}
