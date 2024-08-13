@@ -1,0 +1,38 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	 Scanner sc = new Scanner(System.in);
+	 int a = sc.nextInt();
+	 int b = sc.nextInt();
+	 int c = sc.nextInt();
+	 int d = sc.nextInt();
+	 double x = (double)a/b;
+	 double y = (double)c/d;
+	 double z = (double)d/c;
+	 if(x==y||x==z)
+	  System.out.println("Possible");
+	 else
+	 {
+	  x = (double)a/c;
+	  y = (double)b/d;
+	  z = (double)d/b;
+	  if(x==y||x==z)
+	   System.out.println("Possible");
+	  else
+	 {
+	  x = (double)a/d;
+	  y = (double)b/c;
+	  z = (double)c/b;
+	  if(x==y||x==z)
+	   System.out.println("Possible");
+	  else
+	   System.out.println("Impossible");
+	 }
+	}
+	}
+}
