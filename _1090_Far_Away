@@ -1,0 +1,30 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	 Scanner sc = new Scanner(System.in);
+	 int t = sc.nextInt();
+	 for(int j=0;j<t;j++)
+	 {
+	  int n = sc.nextInt();
+	  int k = sc.nextInt();
+	  long dist = 0;
+	  int []arr = new int[n];
+	  for(int i=0;i<n;i++)
+	  {
+	   arr[i]=sc.nextInt();
+	   int d1 = k-arr[i];
+	   int d2 = arr[i]-1;
+	   if(d1>d2)
+	    dist+=d1;
+	   else
+	    dist+=d2;
+	  }
+	  System.out.println(dist);
+	 }
+	}
+}
