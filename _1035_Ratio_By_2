@@ -1,0 +1,49 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	 Scanner sc = new Scanner(System.in);
+	 int t = sc.nextInt();
+	 for(int j=0;j<t;j++)
+	 {
+	  int x = sc.nextInt();
+	  int y = sc.nextInt();
+	  if(x>y)
+	  {
+	   int z=2*y;
+	   if(x>=z)
+	    System.out.println(0);
+	   else
+	   {
+	   int w=x/2;
+	   w=y-w;
+	   z=z-x;
+	   if(w<z)
+	    System.out.println(w);
+	   else
+	    System.out.println(z);
+	   }
+	  }
+	  else
+	  {
+	   int z=2*x;
+	   if(y>=z)
+	    System.out.println(0);
+	   else
+	   {
+	   int w=y/2;
+	   w=x-w;
+	   z=z-y;
+	   if(w<z)
+	    System.out.println(w);
+	   else
+	    System.out.println(z);
+	  }
+	 }
+	 }
+	}
+}
